@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Code97MVVM.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Code97MVVM.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:id="@+id/fabLayout"
+        android:background="@android:color/transparent"
+         >
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|right"
+            android:contentDescription="@string/extended_fab_content_desc"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_wrapBehaviorInParent="vertical_only" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonUpdate"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonUpdate"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButtonUpdate"
+            app:srcCompat="@drawable/ic_baseline_create_24" />
+
+        <TextView
+            android:id="@+id/tvCreateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background"
+            android:backgroundTint="@color/black"
+            android:padding="4dp"
+            android:text="Create"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonCreate"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonCreate"
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButtonCreate" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:contentDescription="TODO"
+
+            app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonDelete"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonDelete"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButtonDelete"
+            app:srcCompat="@drawable/ic_baseline_update_24" />
+
+        <TextView
+
+            android:id="@+id/tvUpdateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background"
+            android:backgroundTint="@color/black"
+            android:padding="4dp"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonUpdate"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonUpdate"
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButtonUpdate" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+
+            android:contentDescription="TODO"
+            app:layout_constraintBottom_toTopOf="@+id/fab"
+            app:layout_constraintEnd_toEndOf="@+id/fab"
+            app:srcCompat="@drawable/ic_outline_delete_24" />
+
+        <TextView
+            android:id="@+id/tvDeleteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background"
+            android:backgroundTint="@color/black"
+            android:padding="4dp"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonDelete"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonDelete"
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButtonDelete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
